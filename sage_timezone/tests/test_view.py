@@ -28,8 +28,9 @@ class TestTimezoneSelectionView:
         request.session = {}
 
         response = self.view(request)
+        name = getattr(settings, "TIME_ZONE_SESSION_NAME", "user_timezone")
 
-        assert request.session["user_timezone"] == "Europe/London"
+        assert request.session[name] == "Europe/London"
         assert timezone.get_current_timezone_name() == "Europe/London"
         assert response.status_code == 302
         assert response.url == "/"
@@ -40,7 +41,6 @@ class TestTimezoneSelectionView:
             reverse("timezone_select_view"), {"timezone": "Invalid/Timezone"}
         )
         request.session = {}
-
         response = self.view(request)
 
         assert "user_timezone" not in request.session
@@ -54,8 +54,9 @@ class TestTimezoneSelectionView:
         request.session = {}
 
         response = self.view(request)
+        name = getattr(settings, "TIME_ZONE_SESSION_NAME", "user_timezone")
 
-        assert "user_timezone" not in request.session
+        assert name not in request.session
         assert timezone.get_current_timezone_name() == settings.TIME_ZONE
         assert response.status_code == 302
         assert response.url == "/"
