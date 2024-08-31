@@ -72,8 +72,8 @@ Add `django-sage-timezone` to your `INSTALLED_APPS` in the Django settings:
 ```python
 INSTALLED_APPS = [
     ...
-    "django_sage_timezone",
-    ...
+    "sage_timezone",
+    "django.contrib.admin"
 ]
 ```
 
@@ -82,7 +82,7 @@ Also, add the `TimezoneMiddleware` to your middleware settings:
 ```python
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django_sage_timezone.middleware.TimezoneMiddleware",
+    "sage_timezone.middleware.TimezoneMiddleware",
     ...
 ]
 ```
@@ -91,7 +91,7 @@ MIDDLEWARE = [
 
 The `sage_timezone.middleware.timezone.TimezoneMiddleware` must be placed after the `django.contrib.sessions.middleware.SessionMiddleware` in your `MIDDLEWARE` setting. This order is crucial to ensure that the session data is available when the timezone is set.
 
-## Note: 
+## Note:
 You can set a custom session name in your Django settings using the `TIME_ZONE_SESSION_NAME` setting. For example:
 
 ```python
@@ -103,4 +103,4 @@ You can set a custom session name in your Django settings using the `TIME_ZONE_S
 
 Once configured, the Django Admin will include a "Select Timezone" option in the navigation bar. Administrators can choose their preferred timezone, which will be applied to their session.
 
---- 
+---

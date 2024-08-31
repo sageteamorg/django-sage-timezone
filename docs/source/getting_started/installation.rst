@@ -69,7 +69,7 @@ To use `django-sage-timezone`, add it to your `INSTALLED_APPS` in the Django set
     INSTALLED_APPS = [
         ...
         "sage_timezone",
-        ...
+        "django.contrib.admin"
     ]
     MIDDLEWARE = [
       ...
@@ -80,10 +80,15 @@ To use `django-sage-timezone`, add it to your `INSTALLED_APPS` in the Django set
 
 .. warning::
 
-   The `sage_timezone.middleware.timezone.TimezoneMiddleware` must be placed after the 
-   `django.contrib.sessions.middleware.SessionMiddleware` in your `MIDDLEWARE` setting. 
-   This order is crucial to ensure that the session data is available when the timezone is set.
+   The `sage_timezone` app must be placed after the
+   `django.contrib.admin` in your `INSTALLED_APPS` setting.
 
+
+.. warning::
+
+   The `sage_timezone.middleware.timezone.TimezoneMiddleware` must be placed after the
+   `django.contrib.sessions.middleware.SessionMiddleware` in your `MIDDLEWARE` setting.
+   This order is crucial to ensure that the session data is available when the timezone is set.
 
 **Note**: You can set a custom session name in your Django settings using the `TIME_ZONE_SESSION_NAME` setting. For example:
 
