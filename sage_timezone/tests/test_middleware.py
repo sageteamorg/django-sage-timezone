@@ -18,8 +18,8 @@ class TestTimezoneMiddleware:
 
     def test_timezone_set_correctly(self):
         request = self.factory.get("/")
-
-        request.session = {"user_timezone": "Europe/London"}
+        name = getattr(settings, "TIME_ZONE_SESSION_NAME", "user_timezone")
+        request.session = {name: "Europe/London"}
 
         self.middleware.process_request(request)
 

@@ -12,9 +12,9 @@ This package enhances the Django Admin by allowing users to set their timezone p
 Usage in Django Admin
 ---------------------
 
-Once configured, the Django Admin interface will have a "Select Timezone" option in the top navigation bar. 
+Once configured, the Django Admin interface will have a "Select Timezone" option in the top navigation bar.
 
-- **Selecting a Timezone**: Administrators can click on "Select Timezone" to choose their preferred timezone from a dropdown list. 
+- **Selecting a Timezone**: Administrators can click on "Select Timezone" to choose their preferred timezone from a dropdown list.
 
 - **Timezone Display**: After setting the timezone, it will be displayed in the navigation bar, providing immediate feedback to the user.
 
@@ -43,4 +43,3 @@ The middleware handles the application of the selected timezone. When a user sel
 
 
 4. **Model Testing**: The selected timezone will be a default time zone for django setting
-

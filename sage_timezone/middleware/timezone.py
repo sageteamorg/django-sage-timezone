@@ -16,7 +16,8 @@ except ImportError:
 
 class TimezoneMiddleware(MiddlewareMixin):
     """Middleware to handle setting the user's timezone based on their session
-    data."""
+    data.
+    """
 
     def process_request(self, request: HttpRequest) -> None:
         name = getattr(settings, "TIME_ZONE_SESSION_NAME", "user_timezone")
@@ -34,6 +35,7 @@ class TimezoneMiddleware(MiddlewareMixin):
 
     def process_response(self, request: HttpRequest, response) -> Any:
         """Ensure the timezone is deactivated after the response is
-        processed."""
+        processed.
+        """
         timezone.deactivate()
         return response
