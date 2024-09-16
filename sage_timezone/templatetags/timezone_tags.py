@@ -1,6 +1,6 @@
+import pytz
 from django import template
 from django.conf import settings
-import pytz
 
 register = template.Library()
 

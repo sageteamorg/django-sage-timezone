@@ -1,9 +1,9 @@
 import pytz
+from django.conf import settings
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.views import View
-from django.conf import settings
 
 from sage_timezone.forms.timezone import TimezoneForm
 

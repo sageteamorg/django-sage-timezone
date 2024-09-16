@@ -69,7 +69,8 @@ To use `django-sage-timezone`, add it to your `INSTALLED_APPS` in the Django set
     INSTALLED_APPS = [
         ...
         "sage_timezone",
-        "django.contrib.admin"
+        "django.contrib.admin",
+        ...
     ]
     MIDDLEWARE = [
       ...
