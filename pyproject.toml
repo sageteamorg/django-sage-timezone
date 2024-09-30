@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "crm"
+name = "django-sage-timezone"
 version = "0.1.0"
-description = "A project for timezone handling"
+description = "A project for timezone handling."
 authors = ["Radin Ghahremani <radin@sageteam.org>","Sepehr Akbarzadeh <sepehr@sageteam.org>"]
 readme = "README.md"
 
