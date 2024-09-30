@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-sage-timezone"
-version = "0.1.1"
+version = "0.1.2"
 description = "A project for timezone handling."
 authors = ["Radin Ghahremani <radin@sageteam.org>","Sepehr Akbarzadeh <sepehr@sageteam.org>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-django-sage-tools = "^0.2.2"
+django-sage-tools = "^0.3.2"
 pytz = "^2024.1"
 python = ">=3.10,<4.0"
 django = [
