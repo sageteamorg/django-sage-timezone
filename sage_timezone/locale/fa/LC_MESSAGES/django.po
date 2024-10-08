@@ -19,4 +19,4 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: .\sage_timezone\forms\timezone.py:11
 msgid "Select Timezone"
-msgstr ""
+msgstr "انتخاب منطقه زمانی"
