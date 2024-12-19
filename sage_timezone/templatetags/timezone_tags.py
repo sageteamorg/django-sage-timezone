@@ -9,7 +9,7 @@ register = template.Library()
 def get_session_value(request, key):
     """Retrieves the value from the session for the given key."""
     name = getattr(settings, "TIME_ZONE_SESSION_NAME", "user_timezone")
-    return request.session.get(name, None)
+    return request.session.get(name, "Default")
 
 
 @register.simple_tag
